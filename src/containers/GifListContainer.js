@@ -3,7 +3,7 @@ import GifList from "../components/GifList";
 import GifSearch from "../components/GifSearch";
 
 
-export default class GiftListContainer extends React.Component {
+class GiftListContainer extends React.Component {
 
     state = {
         gifs: []
@@ -12,7 +12,7 @@ export default class GiftListContainer extends React.Component {
     render() {
         return (
             <div>
-                <GifSearch fetchGifs={this.fetchGIFs}/>
+                <GifSearch fetchGifs={this.fetchGifs}/>
                 <GifList gifs={this.state.gifs}/>
             </div>
         )
@@ -29,3 +29,6 @@ export default class GiftListContainer extends React.Component {
         this.fetchGifs()
     }
 }
+
+export default GiftListContainer
+
